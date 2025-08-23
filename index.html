@@ -6,6 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .slideshow-container {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+        }
+        .slide {
+            display: none;
+            width: 100%;
+            border-radius: 10px;
+        }
+        .active-slide {
+            display: block;
+        }
+        .slide-buttons {
+            margin-top: 15px;
+        }
+        .slide-buttons button {
+            margin: 0 5px;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            background: #3498db;
+            color: #fff;
+            font-weight: bold;
+        }
+        .slide-buttons button:hover {
+            background: #217dbb;
+        }
+    </style>
 </head>
 <body class="landing is-preload">
 
@@ -58,12 +89,15 @@
                     <p>Our streamlined sponsorship process ensures that sponsors and beneficiaries stay connected every step of the way.</p>
                 </header>
 
-                <!-- Embedded PowerPoint -->
-                <div class="iframe-container">
-                    <iframe src="https://pivottechnicalltd2303-my.sharepoint.com/personal/notification_wellgivers_org/_layouts/15/Doc.aspx?sourcedoc={1191f6a4-103e-44a3-988e-c3701ea3b02e}&amp;action=embedview&amp;wdAr=1.7777777777777777&amp;wdEaaCheck=1" 
-                        width="800px" height="450px" frameborder="0" allowfullscreen>
-                        This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.
-                    </iframe>
+                <!-- Simulated PowerPoint using PNGs -->
+                <div class="slideshow-container">
+                    <img src="assets/images/WellGivers Flow Chart.png" class="slide active-slide" alt="Workflow Slide 1">
+                    <img src="assets/images/WellGivers Flow Chart2.png" class="slide" alt="Workflow Slide 2">
+
+                    <div class="slide-buttons">
+                        <button onclick="showSlide(0)">Slide 1</button>
+                        <button onclick="showSlide(1)">Slide 2</button>
+                    </div>
                 </div>
 
                 <ul class="actions special">
@@ -109,9 +143,15 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
+    <!-- Slide Switcher Script -->
+    <script>
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active-slide', i === index);
+            });
+        }
+    </script>
+
 </body>
 </html>
-
-
-
-
