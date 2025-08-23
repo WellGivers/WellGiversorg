@@ -1,104 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Well Givers</title>
-  <style>
-    /* General Reset */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body, html { scroll-behavior: smooth; font-family: Arial, sans-serif; }
-
-    section {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-    }
-
-    /* Landing Page */
-    .landing {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                  url('https://images.unsplash.com/photo-1588776814546-ec7c54c9a2f3') no-repeat center/cover;
-      color: white;
-    }
-
-    .landing h1 { font-size: 2.5em; margin-bottom: 15px; }
-    .landing p { font-size: 1.2em; max-width: 700px; margin-bottom: 30px; }
-
-    .btn {
-      padding: 12px 25px;
-      margin: 10px;
-      background: #26c579;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.3s;
-      display: inline-block;
-    }
-    .btn:hover { background: #1e9e61; }
-
-    /* Workflow Page */
-    .workflow {
-      background: #f4f7fb;
-    }
-    .workflow h2 { font-size: 2em; margin-bottom: 20px; }
-
-    /* Responsive PowerPoint Embed */
-    .ppt-container {
-      position: relative;
-      width: 100%;
-      max-width: 1000px;
-      padding-bottom: 56.25%; /* 16:9 ratio */
-      height: 0;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      border-radius: 12px;
-    }
-    .ppt-container iframe {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      border: none;
-    }
-
-    /* About Page */
-    .about {
-      background: #ffffff;
-      color: #333;
-    }
-    .about h2 { font-size: 2em; margin-bottom: 15px; }
-    .about p { font-size: 1.1em; max-width: 800px; margin-bottom: 20px; }
-  </style>
+    <title>Wellgivers Sponsorship</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
-<body>
+<body class="landing is-preload">
 
-  <!-- Landing Page -->
-  <section class="landing" id="home">
-    <h1>Welcome to Well Givers</h1>
-    <p>We connect sponsors with beneficiaries to provide accessible healthcare through our HMO Plan. Become a sponsor today and make a real impact.</p>
-    <a href="#workflow" class="btn">See Workflow</a>
-    <a href="https://forms.office.com/your-sponsor-form-link" target="_blank" class="btn">Register as Sponsor</a>
-  </section>
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
 
-  <!-- Workflow Page -->
-  <section class="workflow" id="workflow">
-    <h2>How It Works</h2>
-    <div class="ppt-container">
-      <iframe src="https://pivottechnicalltd2303-my.sharepoint.com/personal/notification_wellgivers_org/_layouts/15/Doc.aspx?sourcedoc={1191f6a4-103e-44a3-988e-c3701ea3b02e}&amp;action=embedview&amp;wdAr=1.7777777777777777&amp;wdEaaCheck=1" 
-              allowfullscreen>
-      </iframe>
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1><a href="index.html">Wellgivers</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="#banner">Home</a></li>
+                                <li><a href="#workflow">Workflow</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a target="_blank" href="https://forms.office.com/Pages/ResponsePage.aspx?id=L3qRuuHieUSsFHpAEWgRbB7NzIfS14dJmK6tVZzWfpxUOFoxWjFBUE9PQkZZOElBRDhBSTdKSFo4TS4u">Register</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Landing / Hero -->
+        <section id="banner">
+            <div class="inner">
+                <h2>Welcome to Wellgivers</h2>
+                <p>
+                    Empowering sponsors to provide healthcare access for their beneficiaries.<br />
+                    Simple. Transparent. Impactful.
+                </p>
+                <ul class="actions special">
+                    <li>
+                        <a target="_blank" href="https://forms.office.com/Pages/ResponsePage.aspx?id=L3qRuuHieUSsFHpAEWgRbB7NzIfS14dJmK6tVZzWfpxUOFoxWjFBUE9PQkZZOElBRDhBSTdKSFo4TS4u" 
+                           class="button primary">Register as a Sponsor</a>
+                    </li>
+                </ul>
+            </div>
+            <a href="#workflow" class="more scrolly">See How It Works</a>
+        </section>
+
+        <!-- Workflow Page -->
+        <section id="workflow" class="wrapper style2 special">
+            <div class="inner">
+                <header class="major">
+                    <h2>How Wellgivers Works</h2>
+                    <p>Our streamlined sponsorship process ensures that sponsors and beneficiaries stay connected every step of the way.</p>
+                </header>
+
+                <!-- Embedded PowerPoint -->
+                <div class="iframe-container">
+                    <iframe src="https://pivottechnicalltd2303-my.sharepoint.com/personal/notification_wellgivers_org/_layouts/15/Doc.aspx?sourcedoc={1191f6a4-103e-44a3-988e-c3701ea3b02e}&amp;action=embedview&amp;wdAr=1.7777777777777777&amp;wdEaaCheck=1" 
+                        width="800px" height="450px" frameborder="0" allowfullscreen>
+                        This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.
+                    </iframe>
+                </div>
+
+                <ul class="actions special">
+                    <li>
+                        <a target="_blank" href="https://forms.office.com/Pages/ResponsePage.aspx?id=L3qRuuHieUSsFHpAEWgRbB7NzIfS14dJmK6tVZzWfpxUOFoxWjFBUE9PQkZZOElBRDhBSTdKSFo4TS4u" 
+                           class="button primary">Register Now</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- About Page -->
+        <section id="about" class="wrapper style3 special">
+            <div class="inner">
+                <header class="major">
+                    <h2>About Wellgivers</h2>
+                    <p>
+                        Wellgivers is a healthcare sponsorship platform that bridges the gap between sponsors and beneficiaries. 
+                        We empower sponsors to support their loved ones, employees, or communities by making healthcare 
+                        contributions easy, transparent, and trackable. <br /><br />
+                        Every sponsorship provides beneficiaries with access to quality healthcare through our HMO plan.
+                    </p>
+                </header>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="copyright">
+                <li>&copy; Wellgivers</li>
+                <li>Design Template: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </footer>
+
     </div>
-  </section>
 
-  <!-- About Page -->
-  <section class="about" id="about">
-    <h2>About Well Givers</h2>
-    <p>Well Givers is a community-driven initiative that bridges the gap between healthcare sponsors and beneficiaries. Sponsors register to support individuals, and beneficiaries gain access to quality healthcare through our HMO plan. We provide transparency, cost breakdowns, and easy tracking of sponsorship impact.</p>
-  </section>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 </html>
