@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Wellgivers Sponsorship</title>
+    <title>WellGivers Sponsorship</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
@@ -19,6 +19,7 @@
         #banner {
             background: url('assets/Images/back1.png') no-repeat center center;
             background-size: cover;
+            background-color: #000; /* fallback hex color */
             color: #fff;
         }
 
@@ -88,6 +89,26 @@
             font-weight: bold;
             cursor: pointer;
         }
+
+        /* 🔹 Centralize workflow text */
+        #workflow p {
+            text-align: center;
+        }
+
+        /* 🔹 About section text black */
+        #about {
+            color: #000;
+        }
+
+        /* 🔹 Fill this form header */
+        .form-title {
+            color: #fff;
+            text-align: center;
+            background: #2c3e50;
+            padding: 8px;
+            border-radius: 4px;
+            margin: 0 0 10px 0;
+        }
     </style>
 </head>
 <body class="landing is-preload">
@@ -97,7 +118,7 @@
 
         <!-- Header -->
         <header id="header" class="alt">
-            <h1><a href="index.html">Wellgivers</a></h1>
+            <h1><a href="index.html">WellGivers</a></h1>
             <nav id="nav">
                 <ul>
                     <li class="special">
@@ -119,9 +140,9 @@
         <!-- Landing / Hero -->
         <section id="banner">
             <div class="inner">
-                <h2>Welcome to Wellgivers</h2>
+                <h2>Welcome to WellGivers</h2>
                 <p>
-                    Empowering sponsors to provide healthcare access for their beneficiaries.<br />
+                    Enabling sponsors to provide healthcare access for their beneficiaries.<br />
                     Simple. Transparent. Impactful.
                 </p>
                 <ul class="actions special">
@@ -138,7 +159,7 @@
         <section id="workflow" class="wrapper style2 special">
             <div class="inner">
                 <header class="major">
-                    <h2>How Wellgivers Works</h2>
+                    <h2>How WellGivers Works</h2>
                     <p>Our streamlined sponsorship process ensures that sponsors and beneficiaries stay connected every step of the way.</p>
                 </header>
 
@@ -164,10 +185,10 @@
         <section id="about" class="wrapper style3 special">
             <div class="inner">
                 <header class="major">
-                    <h2>About Wellgivers</h2>
+                    <h2>About WellGivers</h2>
                     <p>
-                        Wellgivers is a healthcare sponsorship platform that bridges the gap between sponsors and beneficiaries. 
-                        We empower sponsors to support their loved ones, employees, or communities by making healthcare 
+                        WellGivers is an affordable healthcare sponsorship platform that brings beneficiaries closer to better Healthcare. 
+                        We enable sponsors to support their loved ones, employees, or communities by making healthcare 
                         contributions easy, transparent, and trackable.
                     </p>
                 </header>
@@ -180,6 +201,7 @@
     <div id="formModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
+            <h2 class="form-title">Fill this Form</h2>
             <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=L3qRuuHieUSsFHpAEWgRbB7NzIfS14dJmK6tVZzWfpxUOFoxWjFBUE9PQkZZOElBRDhBSTdKSFo4TS4u&embed=true" allowfullscreen></iframe>
         </div>
     </div>
@@ -216,4 +238,3 @@
 
 </body>
 </html>
-
