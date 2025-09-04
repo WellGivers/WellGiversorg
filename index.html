@@ -69,7 +69,7 @@
             background: rgba(0,0,0,0.7);
         }
         .modal-content {
-            background: #fff;
+            background: #2c3e50;   /* <<< Same as Page 2 Workflow background */
             margin: auto;
             padding: 10px;
             border-radius: 8px;
@@ -77,6 +77,7 @@
             max-width: 800px;
             height: 85%;
             overflow: hidden;
+            color: #fff;           /* <<< Make all text inside modal white */
         }
         .modal-content iframe {
             width: 100%;
@@ -88,6 +89,7 @@
             font-size: 28px;
             font-weight: bold;
             cursor: pointer;
+            color: #fff;          /* <<< Close button is white */
         }
 
         /* 🔹 Centralize workflow text */
@@ -103,9 +105,9 @@
 
         /* 🔹 WellGivers Sponsorship Form header */
         .form-title {
-            color: #fff;
+            color: #fff;                /* <<< Heading text white */
             text-align: center;
-            background: #2c3e50; /* dark background so white text shows */
+            background: transparent;    /* <<< No extra background strip */
             padding: 8px;
             border-radius: 4px;
             margin: 0 0 10px 0;
@@ -203,7 +205,7 @@
     <div id="formModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2 class="form-title">Fill this Form</h2>
+            <h2 class="form-title">WellGivers Sponsorship Form</h2>
             <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=L3qRuuHieUSsFHpAEWgRbB7NzIfS14dJmK6tVZzWfpxUOFoxWjFBUE9PQkZZOElBRDhBSTdKSFo4TS4u&embed=true" allowfullscreen></iframe>
         </div>
     </div>
@@ -240,5 +242,3 @@
 
 </body>
 </html>
-
-
