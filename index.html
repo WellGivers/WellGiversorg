@@ -95,16 +95,17 @@
             text-align: center;
         }
 
-        /* 🔹 About section text black */
+        /* 🔹 About section text & background */
         #about {
-            color: #000;
+            background: #000 !important; /* override external CSS */
+            color: #fff !important;      /* white text */
         }
 
-        /* 🔹 WellGivers Sponsorship Form */
+        /* 🔹 WellGivers Sponsorship Form header */
         .form-title {
             color: #fff;
             text-align: center;
-            background: #2c3e50;
+            background: #2c3e50; /* dark background so white text shows */
             padding: 8px;
             border-radius: 4px;
             margin: 0 0 10px 0;
@@ -239,4 +240,3 @@
 
 </body>
 </html>
-
