@@ -58,40 +58,6 @@
             background: #1a252f;
         }
 
-        /* 🔹 Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            padding-top: 60px;
-            left: 0; top: 0;
-            width: 100%; height: 100%;
-            background: rgba(0,0,0,0.7);
-        }
-        .modal-content {
-            background: #2c3e50;   /* <<< Same as Page 2 Workflow background */
-            margin: auto;
-            padding: 10px;
-            border-radius: 8px;
-            width: 90%; 
-            max-width: 800px;
-            height: 85%;
-            overflow: hidden;
-            color: #fff;           /* <<< Make all text inside modal white */
-        }
-        .modal-content iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        .close {
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            color: #fff;          /* <<< Close button is white */
-        }
-
         /* 🔹 Centralize workflow text */
         #workflow p {
             text-align: center;
@@ -101,16 +67,6 @@
         #about {
             background: #000 !important; /* override external CSS */
             color: #fff !important;      /* white text */
-        }
-
-        /* 🔹 WellGivers Sponsorship Form header */
-        .form-title {
-            color: #fff;                /* <<< Heading text white */
-            text-align: center;
-            background: transparent;    /* <<< No extra background strip */
-            padding: 8px;
-            border-radius: 4px;
-            margin: 0 0 10px 0;
         }
     </style>
 </head>
@@ -131,8 +87,8 @@
                                 <li><a href="#banner">Home</a></li>
                                 <li><a href="#workflow">Workflow</a></li>
                                 <li><a href="#about">About</a></li>
-                                <!-- 🔹 Button opens modal -->
-                                <li><a href="javascript:void(0)" class="openForm">Register</a></li>
+                                <!-- 🔹 Direct link to Microsoft Form -->
+                                <li><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=L3qRuuHieUSsFHpAEWgRbB7NzIfS14dJmK6tVZzWfpxUOFoxWjFBUE9PQkZZOElBRDhBSTdKSFo4TS4u" target="_blank">Register</a></li>
                             </ul>
                         </div>
                     </li>
@@ -150,8 +106,8 @@
                 </p>
                 <ul class="actions special">
                     <li>
-                        <!-- 🔹 Register button triggers modal -->
-                        <a href="javascript:void(0)" class="button primary openForm">Register as a Sponsor</a>
+                        <!-- 🔹 Direct link to Microsoft Form -->
+                        <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=L3qRuuHieUSsFHpAEWgRbB7NzIfS14dJmK6tVZzWfpxUOFoxWjFBUE9PQkZZOElBRDhBSTdKSFo4TS4u" target="_blank" class="button primary">Register as a Sponsor</a>
                     </li>
                 </ul>
             </div>
@@ -179,7 +135,8 @@
 
                 <ul class="actions special">
                     <li>
-                        <a href="javascript:void(0)" class="button primary openForm">Register Now</a>
+                        <!-- 🔹 Direct link to Microsoft Form -->
+                        <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=L3qRuuHieUSsFHpAEWgRbB7NzIfS14dJmK6tVZzWfpxUOFoxWjFBUE9PQkZZOElBRDhBSTdKSFo4TS4u" target="_blank" class="button primary">Register Now</a>
                     </li>
                 </ul>
             </div>
@@ -201,15 +158,6 @@
 
     </div>
 
-    <!-- 🔹 Modal with Form -->
-    <div id="formModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2 class="form-title">WellGivers Sponsorship Form</h2>
-            <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=L3qRuuHieUSsFHpAEWgRbB7NzIfS14dJmK6tVZzWfpxUOFoxWjFBUE9PQkZZOElBRDhBSTdKSFo4TS4u&embed=true" allowfullscreen></iframe>
-        </div>
-    </div>
-
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
@@ -227,17 +175,6 @@
                 slide.classList.toggle('active-slide', i === index);
             });
         }
-
-        // 🔹 Modal Script
-        const modal = document.getElementById("formModal");
-        const btns = document.querySelectorAll(".openForm");
-        const span = document.querySelector(".close");
-
-        btns.forEach(btn => {
-            btn.onclick = () => { modal.style.display = "block"; }
-        });
-        span.onclick = () => { modal.style.display = "none"; }
-        window.onclick = (event) => { if (event.target == modal) modal.style.display = "none"; }
     </script>
 
 </body>
